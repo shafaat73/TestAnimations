@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/endCard"
+        motion:constraintSetStart="@+id/startCard"
+        motion:duration="1000"
+       >
+
+
+        <OnSwipe motion:dragDirection="dragLeft" />
+
+        <KeyFrameSet>
+            <!-- View1 -->
+            <KeyAttribute
+                android:scaleX="1"
+                android:scaleY="1"
+                android:translationX="0dp"
+                motion:framePosition="0"
+                motion:motionTarget="@id/view1"
+                motion:transitionEasing="decelerate"/>
+
+            <KeyAttribute
+                android:scaleX="1"
+                android:scaleY="1"
+                android:translationX="-450dp"
+                motion:framePosition="40"
+                motion:motionTarget="@id/view1"
+                motion:transitionEasing="decelerate"/>
+
+            <KeyAttribute
+                android:scaleX="1"
+                android:scaleY="1"
+                android:translationX="-450dp"
+                motion:framePosition="60"
+                motion:motionTarget="@id/view1"
+                motion:transitionEasing="decelerate"/>
+
+            <KeyAttribute
+                android:scaleX="1"
+                android:scaleY="1"
+                android:translationX="0dp"
+                motion:framePosition="100"
+                motion:motionTarget="@id/view1"
+                motion:transitionEasing="decelerate"/>
+            <KeyAttribute
+                motion:motionTarget="@+id/imgView"
+                motion:framePosition="100"
+                android:alpha="1" >
+
+            </KeyAttribute>
+            <KeyAttribute
+                motion:motionTarget="@+id/view1"
+                motion:framePosition="22"
+                android:alpha="0.2" />
+            <KeyAttribute
+                motion:motionTarget="@+id/view2"
+                motion:framePosition="0"
+                android:translationX="380dp" />
+            <KeyAttribute
+                motion:motionTarget="@+id/view2"
+                motion:framePosition="40"
+                android:translationX="0dp" />
+            <KeyAttribute
+                motion:motionTarget="@+id/view2"
+                motion:framePosition="21"
+                android:translationX="120dp" />
+            <KeyAttribute
+                motion:motionTarget="@+id/view2"
+                motion:framePosition="29"
+                android:translationX="10dp" />
+            <KeyAttribute
+                motion:motionTarget="@+id/imgView"
+                motion:framePosition="9"
+                android:translationY="-100dp" />
+
+        </KeyFrameSet>
+    </Transition>
+
+
+    <ConstraintSet android:id="@+id/startCard">
+        <Constraint
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="1dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintLeft_toLeftOf="parent"
+            motion:layout_constraintRight_toRightOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="0dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintLeft_toLeftOf="parent"
+            motion:layout_constraintRight_toRightOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
+        <Constraint
+            android:id="@+id/imgView"
+            android:elevation="12dp"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="320dp"
+            android:layout_height="180dp"
+            motion:layout_constraintHorizontal_bias="0.775"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="180dp" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/endCard">
+        <Constraint
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="0dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintLeft_toLeftOf="parent"
+            motion:layout_constraintRight_toRightOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="1dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintLeft_toLeftOf="parent"
+            motion:layout_constraintRight_toRightOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
+        <Constraint
+            android:id="@+id/imgView"
+            android:elevation="12dp"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            motion:layout_constraintHorizontal_bias="0.191"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="44dp" ></Constraint>
+    </ConstraintSet>
+
+</MotionScene>

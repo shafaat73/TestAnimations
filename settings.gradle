@@ -1,0 +1,3 @@
+rootProject.name = "MyAnimationsApplication"
+include ':app'
+include ':animateButton'

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/parent"
+        android:animateLayoutChanges="true"
+        tools:context=".ui.CardsActivity">
+
+        <Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/black"
+            android:title="My Cards"
+            android:titleTextColor="@color/white" />
+
+        <View   
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:id="@+id/view"
+            android:layout_below="@id/toolbar"
+            android:layout_marginBottom="150dp"/>
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardViewBack"
+            android:layout_width="match_parent"
+            android:layout_below="@id/view"
+            android:layout_height="250dp"
+            android:layout_marginLeft="40dp"
+            android:animateLayoutChanges="true"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="40dp"
+            android:backgroundTint="@android:color/holo_green_light"
+            android:clickable="true"
+            android:transitionName="cardTransition" />
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_below="@id/view"
+            android:layout_height="250dp"
+            android:layout_marginLeft="20dp"
+            android:animateLayoutChanges="true"
+            android:layout_marginTop="70dp"
+            android:layout_marginRight="20dp"
+            android:backgroundTint="@android:color/holo_blue_dark"
+            android:clickable="true"
+            android:transitionName="cardTransition" />
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_below="@id/cardView"
+            android:animateLayoutChanges="true"
+            android:id="@+id/cardText"
+            android:visibility="gone"
+            android:backgroundTint="@android:color/black"
+            android:layout_margin="20dp"
+            android:transitionName="cardTransition">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Click Me"
+                android:textColor="@color/white"
+                android:textSize="19dp" />
+        </com.google.android.material.card.MaterialCardView>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="20dp"
+            android:text="Checkout"
+            android:background="@color/black"
+            android:visibility="gone"
+            android:animateLayoutChanges="true"
+            android:id="@+id/btnCheck"
+            android:textColor="@color/white"/>
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginLeft="40dp"
+            android:animateLayoutChanges="true"
+            android:layout_marginTop="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="40dp"
+            android:clickable="true"
+            android:transitionName="cardTransition" />
+
+
+    </RelativeLayout>
+</layout>
